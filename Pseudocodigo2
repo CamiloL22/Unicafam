@@ -1,0 +1,18 @@
+Algoritmo Ejercicio5
+    // Definir las variables de entrada
+    Definir ExamenSangre, ExamenOjos, Consulta, valorTotal Como Real
+    ExamenSangre <- 35000.0
+    ExamenOjos <- 50000.0
+    Consulta <- 80000.0
+	
+    // Proceso: Calcular el valor total a pagar por parte del acudiente
+    valorTotal <- ExamenSangre + ExamenOjos + Consulta
+	
+    // Salida: Imprimir el valor total a pagar por parte del acudiente
+    Escribir "----- Resumen del Costo de la Consulta -----"
+    Escribir "Valor del examen de sangre: $" + valorExamenSangre
+    Escribir "Valor del examen de ojos: $" + valorExamenOjos
+    Escribir "Valor de la consulta médica: $" + valorConsulta
+    Escribir "Valor total a pagar por parte del acudiente: $" + valorTotal
+	
+FinAlgoritmo
