@@ -1,0 +1,41 @@
+Algoritmo Ejercicio4
+	// Definir las variables de entrada
+    Definir zapatos_hombre Como Entero;
+	Definir zapatos_nino Como Entero;
+	Definir zapatos_dama Como Entero;
+    Definir precio_zapatos_hombre Como Real;
+	Definir precio_zapatos_nino Como Real;
+	Definir precio_zapatos_dama Como Real;
+	Definir totalH Como Real;
+	Definir totalN Como Real;
+	Definir totalD Como Real;
+	Definir subtotal Como Real;
+	Definir iva Como Real;
+	Definir total_pago Como Real;
+	precio_zapatos_hombre <- 80000.0;
+	precio_zapatos_nino <- 50000.0;
+	precio_zapatos_dama <- 70000.0;
+	
+    // Entradas: Leer la cantidad de zapatos de cada tipo
+    Escribir "Ingrese la cantidad de pares de zapatos para hombre: "
+    Leer zapatos_hombre
+    Escribir "Ingrese la cantidad de pares de zapatos para niño: "
+    Leer zapatos_nino
+    Escribir "Ingrese la cantidad de pares de zapatos para dama: "
+    Leer zapatos_dama
+	Escribir "Ingrese valor del iva:" 
+	Leer iva
+	
+    // Proceso: Calcular el importe de la compra
+    totalH <- zapatos_hombre * precio_zapatos_hombre
+    totalN <- zapatos_nino * precio_zapatos_nino
+    totalD <- zapatos_dama * precio_zapatos_dama
+    subtotal <- totalH + totalN + totalD
+    iva <- subtotal * 0.16
+    total_pago <- subtotal + iva
+	
+    // Salida: Imprimir el valor del IVA y el valor total a pagar
+    Escribir "----- Resumen de la Compra -----"
+    Escribir "Valor total a pagar (incluido el IVA): $"
+	Leer total_pago
+FinAlgoritmo
