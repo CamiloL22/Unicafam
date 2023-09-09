@@ -1,0 +1,22 @@
+public class CompraSupermercado {
+    public static void main(String[] args) {
+        // Definir las cantidades y los precios por unidad
+        int cantidadArroz = 10;
+        int cantidadGelatina = 5;
+        double precioArrozPorUnidad = 2500.0;
+        double precioGelatinaPorUnidad = 1000.0;
+
+        // Proceso: Calcular el importe total de la compra
+        double importeArroz = cantidadArroz * precioArrozPorUnidad;
+        double importeGelatina = cantidadGelatina * precioGelatinaPorUnidad;
+        double importeTotal = importeArroz + importeGelatina;
+
+        // Salida: Imprimir el valor de la compra
+        System.out.println("----- Resumen de la Compra -----");
+        System.out.println("Cantidad de arroz: " + cantidadArroz);
+        System.out.println("Cantidad de gelatina: " + cantidadGelatina);
+        System.out.println("Precio por unidad de arroz: $" + precioArrozPorUnidad);
+        System.out.println("Precio por unidad de gelatina: $" + precioGelatinaPorUnidad);
+        System.out.println("Importe total de la compra: $" + importeTotal);
+    }
+}
