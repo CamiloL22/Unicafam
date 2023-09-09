@@ -1,0 +1,41 @@
+Algoritmo facturacionSupermercado
+    // Definir constante
+    PORCENTAJE_IVA = 0.19
+    
+    // Declarar variables
+    TOTAL_A_PAGAR = 0
+    SUBTOTAL = 0
+    TOTAL_PRODUCTOS = 0
+    NOMBRE_PRODUCTO = ""
+    PRECIO_PRODUCTO = 0
+    
+    // Iniciar proceso de facturación
+    ESCRIBIR "Bienvenido al Supermercado"
+    ESCRIBIR "Ingrese la cantidad de productos a comprar:"
+    LEER TOTAL_PRODUCTOS
+    
+    PARA i DESDE 1 HASTA TOTAL_PRODUCTOS HACER
+        // Ingresar datos del producto
+        ESCRIBIR "Ingrese el nombre del producto ", i, ":"
+        LEER NOMBRE_PRODUCTO
+        ESCRIBIR "Ingrese el precio del producto ", i, ":"
+        LEER PRECIO_PRODUCTO
+        
+        // Calcular subtotal
+        SUBTOTAL = SUBTOTAL + PRECIO_PRODUCTO
+    FIN PARA
+    
+    // Calcular total a pagar (con IVA)
+    TOTAL_A_PAGAR = SUBTOTAL + (SUBTOTAL * PORCENTAJE_IVA)
+    
+    // Mostrar factura
+    ESCRIBIR "----- Factura -----"
+    ESCRIBIR "Total productos comprados: ", TOTAL_PRODUCTOS
+    PARA i DESDE 1 HASTA TOTAL_PRODUCTOS HACER
+        ESCRIBIR "Producto ", i, ": ", NOMBRE_PRODUCTO, " - Precio: ", PRECIO_PRODUCTO
+    FIN PARA
+    ESCRIBIR "Subtotal: ", SUBTOTAL
+    ESCRIBIR "Total a pagar (con IVA): ", TOTAL_A_PAGAR
+    ESCRIBIR "----------------------------------------"
+
+FinAlgoritmo
