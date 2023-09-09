@@ -1,0 +1,30 @@
+public class CalculoSalarioEmpleado {
+    public static void main(String[] args) {
+        // Definir una instancia de Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Entradas: Leer el número de horas trabajadas y la tarifa por hora
+        System.out.print("Ingrese el número de horas trabajadas: ");
+        double horasTrabajadas = scanner.nextDouble();
+
+        System.out.print("Ingrese la tarifa por hora: ");
+        double tarifaPorHora = scanner.nextDouble();
+
+        // Proceso: Calcular el salario del empleado
+        double salario;
+
+        if (horasTrabajadas <= 40) {
+            salario = horasTrabajadas * tarifaPorHora;
+        } else {
+            double horasExtras = horasTrabajadas - 40;
+            double tarifaHorasExtras = tarifaPorHora * 1.5;
+            salario = (40 * tarifaPorHora) + (horasExtras * tarifaHorasExtras);
+        }
+
+        // Salida: Imprimir el salario del empleado
+        System.out.println("----- Resumen del Salario -----");
+        System.out.println("Horas trabajadas: " + horasTrabajadas);
+        System.out.println("Tarifa por hora: $" + tarifaPorHora);
+        System.out.println("Salario del empleado: $" + salario);
+    }
+}
