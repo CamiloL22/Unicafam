@@ -1,0 +1,27 @@
+public class PagoOperario {
+    public static void main(String[] args) {
+        // Definir las cantidades y los precios por unidad
+        int cantidadPantalones = 50;
+        int cantidadCamisas = 30;
+        int cantidadBuzos = 10;
+        double precioPantalonPorUnidad = 12000.0;
+        double precioCamisaPorUnidad = 8000.0;
+        double precioBuzoPorUnidad = 4000.0;
+
+        // Proceso: Calcular el salario total del operario
+        double salarioPantalones = cantidadPantalones * precioPantalonPorUnidad;
+        double salarioCamisas = cantidadCamisas * precioCamisaPorUnidad;
+        double salarioBuzos = cantidadBuzos * precioBuzoPorUnidad;
+        double salarioTotal = salarioPantalones + salarioCamisas + salarioBuzos;
+
+        // Salida: Imprimir el salario del operario
+        System.out.println("----- Resumen del Pago al Operario -----");
+        System.out.println("Cantidad de pantalones cortados: " + cantidadPantalones);
+        System.out.println("Cantidad de camisas cosidas: " + cantidadCamisas);
+        System.out.println("Cantidad de buzos armados: " + cantidadBuzos);
+        System.out.println("Precio por unidad de pantalón: $" + precioPantalonPorUnidad);
+        System.out.println("Precio por unidad de camisa: $" + precioCamisaPorUnidad);
+        System.out.println("Precio por unidad de buzo: $" + precioBuzoPorUnidad);
+        System.out.println("Salario total a pagar al operario: $" + salarioTotal);
+    }
+}
