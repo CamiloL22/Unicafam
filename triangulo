@@ -1,0 +1,49 @@
+//Solicitar los lados de un triángulo y determinar de qué tipo de triángulo se trata. Defina las
+//entradas, el proceso y la salida.
+
+import java.util.Scanner;
+
+public class TipoTriangulo {
+
+    public static void main(String[] args) {
+        // Definir las entradas
+        Scanner scanner = new Scanner(System.in);
+        double lado1, lado2, lado3;
+
+        // Pedir al usuario los lados del triángulo
+        System.out.print("Ingrese el primer lado del triángulo: ");
+        lado1 = scanner.nextDouble();
+
+        System.out.print("Ingrese el segundo lado del triángulo: ");
+        lado2 = scanner.nextDouble();
+
+        System.out.print("Ingrese el tercer lado del triángulo: ");
+        lado3 = scanner.nextDouble();
+
+        // Proceso para determinar el tipo de triángulo
+        String tipoTriangulo = "";
+
+        if (esTrianguloValido(lado1, lado2, lado3)) {
+            if (lado1 == lado2 && lado2 == lado3) {
+                tipoTriangulo = "Equilátero";
+            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+                tipoTriangulo = "Isósceles";
+            } else {
+                tipoTriangulo = "Escaleno";
+            }
+        } else {
+            tipoTriangulo = "No es un triángulo válido";
+        }
+
+        // Salida: Mostrar el tipo de triángulo
+        System.out.println("Tipo de triángulo: " + tipoTriangulo);
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+
+    // Función para verificar si los lados forman un triángulo válido
+    public static boolean esTrianguloValido(double lado1, double lado2, double lado3) {
+        return (lado1 + lado2 > lado3) && (lado1 + lado3 > lado2) && (lado2 + lado3 > lado1);
+    }
+}
