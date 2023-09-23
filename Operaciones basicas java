@@ -1,0 +1,31 @@
+//Pedir al usuario un valor. Si el valor es positivo, pedir un segundo valor y calcular la suma, resta
+//y producto de ambos. Mostrar los resultados por pantalla.
+//Defina las entradas, el proceso y la salida.
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        
+        System.out.println("Ingrese un valor positivo");
+        double valor1 = consola.nextDouble();
+        
+        if (valor1 >= 0){
+            
+            System.out.println("Ingrese otro valor");
+            double valor2 = consola.nextDouble();
+            
+            double suma = (valor1 + valor2);
+            double resta = valor1 - valor2;
+            double producto = valor1 * valor2;
+            
+            System.out.println("La suma de los valores es:" + suma);
+            System.out.println("La resta de los valores es:" + resta);
+            System.out.println("El producto de los valores es:" + producto);
+        }else{
+            System.out.println("El primer valor no es positivo");
+        }
+    }
+    
+}
