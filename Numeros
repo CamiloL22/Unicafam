@@ -1,0 +1,27 @@
+//Leer 2 números; si son iguales que los multiplique, si el primero es mayor que el segundo que
+//los reste y si no que los sume. Defina las entradas, el proceso y la salida
+
+import java.util.Scanner;
+public class Ejercicio10 {
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        
+        System.out.println("Ingrese el primer numero");
+        int num1 = consola.nextInt();
+        
+        System.out.println("Ingrese el segundo numero");
+        int num2 = consola.nextInt();
+        
+        int resultado;
+        
+        if (num1 == num2){
+            resultado = num1 * num2;
+        }else if (num1 > num2){
+            resultado = num1 - num2;
+        }else{
+            resultado = num1 + num2;
+        }
+        
+        System.out.println("El resultado es " + resultado);
+    }
+}
