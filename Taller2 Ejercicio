@@ -1,0 +1,49 @@
+//Una persona debe realizar un muestreo con 50 personas para determinar el promedio
+//de peso de los niños, jóvenes, adultos y viejos que existen en su zona habitacional.
+import java.util.Scanner;
+public class Ejercicio8 {
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        
+        int contador = 0;
+        float  pesoniño = 0;
+        int niño = 0;
+        float pesojoven = 0;
+        int joven = 0;
+        float pesoadulto = 0;
+        int adulto = 0;
+        float pesoviejo = 0;
+        int viejo = 0;
+        
+        while (contador <50){
+            System.out.println("Ingrese la edad de la persona: ");
+            int edad = consola.nextInt();
+            System.out.println("Ingrese el peso de la persona: ");
+            float peso = consola.nextFloat();
+            
+            if (edad >= 0 && edad <= 13){
+                niño++;
+                pesoniño += peso;
+            }else if(edad >= 14 && edad <= 29){
+                joven ++;
+                pesojoven += peso;
+            }else if(edad >= 30 && edad <= 59){
+                adulto ++;
+                pesoadulto *= peso;
+            }else{
+                viejo ++;
+                pesoviejo *= peso;
+            }
+            contador ++;
+        }
+        float promedioniño = pesoniño/niño;
+        float promediojoven = pesojoven/joven;
+        float promedioadulto = pesoadulto/adulto;
+        float promedioviejo= pesoviejo/viejo;
+        
+        System.out.println("Promdio peso de ninos: " + promedioniño);
+        System.out.println("Promdio peso de jovenes: " + promediojoven);
+        System.out.println("Promdio peso de adultos: " + promedioadulto);
+        System.out.println("Promdio peso de viejos: " + promedioviejo);
+    }
+}
