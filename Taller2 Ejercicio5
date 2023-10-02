@@ -1,0 +1,62 @@
+//Suponga que se tiene un conjunto de calificaciones de un grupo de 40 alumnos.
+//Realizar un algoritmo y el programa para calcular la calificación media y la calificación
+//más baja de todo el grupo.
+
+//Algoritmo
+
+//Definir
+//  n como entero;
+//  promedio como real;
+//  baja como real;
+//  i como entero;
+
+//Inicio
+//  n = 40;
+//  promedio = 0;
+//  baja = 1000;
+//  i = 1;
+
+//  Mientras (i <= n) Hacer
+//    Leer calificación[i];
+
+//    Si (calificación[i] < baja) Entonces
+//      baja = calificación[i];
+
+//    promedio = promedio + calificación[i];
+
+    //i = i + 1;
+
+  //promedio = promedio / n;
+
+  //Escribir "El promedio es ", promedio;
+  //Escribir "La calificación más baja es ", baja;
+
+//Fin
+
+import java.util.Scanner;
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        
+        int n = 40;
+        double promedio = 0;
+        double bajo = 1000;
+        
+        int i = 1;
+        while (i <= n){
+            System.out.println("Ingrese la calificacion del alumno " + i + ": ");
+            double calificacion = consola.nextDouble();
+            
+            if (calificacion < bajo){
+                bajo = calificacion;
+            }
+            promedio += calificacion;
+            
+            i++;
+        }
+        promedio /= n;
+        
+        System.out.println("El promedio es: " + promedio);
+        System.out.println("La calificacion mas baja es: " + bajo);
+    }
+}
