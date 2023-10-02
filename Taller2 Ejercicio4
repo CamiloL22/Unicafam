@@ -1,0 +1,27 @@
+//Calcular de la suma y la media aritmética de N números reales. Solicitar el valor de N al
+//usuario y cada uno de los N números reales.
+import java.util.Scanner;
+public class Ejercicico4 {
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        
+        System.out.println("Ingrese el valor de N: ");
+        int n = consola.nextInt();
+        
+        double suma = 0;
+        double promedio = 0;
+        
+        int i = 1;  
+        while (i <= n){
+            System.out.println("Ingrese el numero " + i + ": ");
+            double numero = consola.nextDouble();
+            
+            suma += numero;
+            i++;
+        }
+        promedio = suma/n;
+        
+        System.out.println("La suma de los numeros es: " +  suma);
+        System.out.println("La media aritmetica de los numeros es: " + promedio);
+    }
+}
