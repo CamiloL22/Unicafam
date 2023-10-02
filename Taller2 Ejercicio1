@@ -1,0 +1,22 @@
+//Calcular el promedio de un alumno que tiene 7 calificaciones en la materia de Cálculo.
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    //Promedio de notas
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        int nota, suma = 0;
+        int i = 1;
+        
+        System.out.println("Ingrese nombre del alumno:");
+        String nombre = consola.nextLine();
+        do {
+            System.out.println("Ingrese la nota" + i + ": ");
+            nota = consola.nextInt();
+            suma += nota;
+            i++;
+        }while(i <= 7);
+        double promedio = suma/7;
+        System.out.println("El promedio de " + nombre + " ea " +  promedio);
+    }
+    }
