@@ -1,0 +1,27 @@
+//Leer 10 números y obtener su cubo y su cuarta
+import java.util.Scanner;
+
+public class Ejercicio2_4 {
+
+    public static void main(String[] args) {
+        // Declaramos las variables
+        int cubo, cuarta;
+        Scanner consola = new Scanner(System.in);
+
+        // Usamos un bucle while para leer 10 números
+        int i = 1;
+        while (i <= 10) {
+            // Leemos un número
+            System.out.println("Ingrese el número " + i + ": ");
+            int numero = consola.nextInt();
+
+            cubo = numero * numero * numero;
+            cuarta = numero * numero * numero * numero;
+
+            System.out.println("El cubo de " + numero + " es " + cubo);
+            System.out.println("La cuarta de " + numero + " es " + cuarta);
+
+            i++;
+        }
+    }
+}
