@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+        // Declara las variables
+        int[] calificaciones = new int[7];
+        int suma = 0;
+        double promedio;
+
+        // Crea un objeto Scanner para leer datos del usuario
+        Scanner sc = new Scanner(System.in);
+
+        // Lee las calificaciones del usuario
+        for (int i = 0; i < calificaciones.length; i++) {
+            System.out.print("Ingrese la calificación " + (i + 1) + ": ");
+            calificaciones[i] = sc.nextInt();
+        }
+
+        // Calcula la suma de las calificaciones
+        for (int i = 0; i < calificaciones.length; i++) {
+            suma += calificaciones[i];
+        }
+
+        // Calcula el promedio
+        promedio = suma / calificaciones.length;
+
+        // Imprime el promedio
+        System.out.println("El promedio es de " + promedio);
+    }
+}
