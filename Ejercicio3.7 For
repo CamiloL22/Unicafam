@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Ejercicio3_7 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduzca 15 números negativos:");
+
+        // Declaramos un array de 15 números enteros
+        int[] numeros = new int[15];
+
+        // Leemos los 15 números negativos
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Convertimos los números a positivos
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = -numeros[i];
+        }
+
+        // Imprimimos los números positivos
+        System.out.println("Los números positivos son:");
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println(numeros[i]);
+        }
+    }
+}
