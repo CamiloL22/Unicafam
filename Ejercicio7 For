@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+    public static void main(String[] args) {
+        // Pedir al usuario el número a multiplicar
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el número a multiplicar: ");
+        int numero = scanner.nextInt();
+
+        // Imprimir la tabla de multiplicar
+        for (int i = 1; i <= 10; i++) {
+            System.out.printf("%d x %d = %d\n", numero, i, numero * i);
+        }
+    }
+}
