@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitamos al usuario el valor de N
+        System.out.println("Introduzca el número de números reales:");
+        int n = scanner.nextInt();
+
+        // Declaramos e inicializamos las variables para almacenar la suma y la media
+        float suma = 0;
+        float media = 0;
+
+        // Solicitamos al usuario cada uno de los N números reales
+        for (int i = 0; i < n; i++) {
+            System.out.println("Introduzca el número real " + (i + 1) + ":");
+            float numero = scanner.nextFloat();
+
+            // Sumamos el número al total
+            suma += numero;
+        }
+
+        // Calculamos la media
+        media = suma / n;
+
+        // Imprimimos los resultados
+        System.out.println("La suma de los números es " + suma);
+        System.out.println("La media aritmética es " + media);
+    }
+}
