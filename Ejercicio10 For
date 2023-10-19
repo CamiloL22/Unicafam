@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Ejercicio10 {
+
+    public static void main(String[] args) {
+        // Declaramos las variables
+        int kilos, precioKilo, total, descuento, pagar = 0;
+        // Declaramos el escaner
+        Scanner sc = new Scanner(System.in);
+
+        // Iniciamos el ciclo for
+        for (int i = 1; i <= 15; i++) {
+            // Pedimos los datos del cliente
+            System.out.println("Cliente " + i + ":");
+            System.out.print("¿Cuántos kilos compró? ");
+            kilos = sc.nextInt();
+            System.out.print("¿Cuánto cuesta el kilo? ");
+            precioKilo = sc.nextInt();
+
+            // Calculamos el total
+            total = kilos * precioKilo;
+
+            // Aplicamos el descuento
+            if (kilos > 10) {
+                descuento = (int) (total * 0.15);
+            } else {
+                descuento = 0;
+            }
+
+            // Calculamos el pago
+            pagar = total - descuento;
+
+            // Imprimimos los resultados
+            System.out.println("Pago del cliente " + i + ": " + pagar);
+        }
+
+        // Imprimimos el total de la tienda
+        System.out.println("Total de la tienda: " + pagar);
+    }
+}
