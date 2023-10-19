@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Ejercicio6 {
+
+    public static void main(String[] args) {
+
+        // Declaramos las variables
+        int[] calificaciones = new int[40];
+        int calificacionMasBaja = Integer.MAX_VALUE;
+        int sumaCalificaciones = 0;
+
+        // Leemos las calificaciones
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < calificaciones.length; i++) {
+            calificaciones[i] = sc.nextInt();
+        }
+
+        // Calculamos la calificación media
+        for (int calificacion : calificaciones) {
+            sumaCalificaciones += calificacion;
+        }
+        float promedio = (float)sumaCalificaciones / calificaciones.length;
+
+        // Calculamos la calificación más baja
+        for (int calificacion : calificaciones) {
+            if (calificacion < calificacionMasBaja) {
+                calificacionMasBaja = calificacion;
+            }
+        }
+
+        // Imprimimos los resultados
+        System.out.println("La calificación media es: " + promedio);
+        System.out.println("La calificación más baja es: " + calificacionMasBaja);
+    }
+}
