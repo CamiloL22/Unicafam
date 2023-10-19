@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Ejercicio4 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Declaramos las variables
+        int numerosPositivos = 0;
+        int numerosNegativos = 0;
+        int numerosNeutros = 0;
+
+        // Leemos 20 números
+        for (int i = 0; i < 20; i++) {
+            System.out.print("Ingrese el número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+
+            // Contamos los números positivos, negativos y neutros
+            if (numero > 0) {
+                numerosPositivos++;
+            } else if (numero < 0) {
+                numerosNegativos++;
+            } else {
+                numerosNeutros++;
+            }
+        }
+
+        // Imprimimos los resultados
+        System.out.println("Números positivos: " + numerosPositivos);
+        System.out.println("Números negativos: " + numerosNegativos);
+        System.out.println("Números neutros: " + numerosNeutros);
+    }
+}
